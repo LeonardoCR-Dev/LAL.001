@@ -1,0 +1,789 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="iva" this:iva.in_Iva="0.16" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_Iva" Type="InArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1474,1142</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>iva_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="28">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="27">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:Annotation.AnnotationText="LAL.001.005&#xA;&#xA;Agrega el iva y su indicador correspondiente" DisplayName="iva" sap:VirtualizedContainerService.HintSize="940,1077" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Tratar'" sap:VirtualizedContainerService.HintSize="898,928" sap2010:WorkflowViewState.IdRef="WindowScope_2" InformativeScreenshot="4fc5a69ec0992a198295dc670e68bea7" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Tratar factura acreedor reg.prelim.*' /&gt;">
+      <ui:WindowScope.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Flowchart sap:VirtualizedContainerService.HintSize="864,782" sap2010:WorkflowViewState.IdRef="Flowchart_2">
+            <Flowchart.Variables>
+              <Variable x:TypeArguments="x:String" Name="IndicadorIva" />
+              <Variable x:TypeArguments="x:String" Name="Posiciones" />
+              <Variable x:TypeArguments="x:String" Name="PosicionesActual" />
+              <Variable x:TypeArguments="x:String" Name="MensajeStatusBar" />
+            </Flowchart.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                <av:Point x:Key="ShapeLocation">390,2.5</av:Point>
+                <av:Size x:Key="ShapeSize">60,75</av:Size>
+                <av:PointCollection x:Key="ConnectorLocation">420,77.5 420,97</av:PointCollection>
+                <x:Double x:Key="Width">830</x:Double>
+                <x:Double x:Key="Height">745.5</x:Double>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Flowchart.StartNode>
+              <x:Reference>__ReferenceID10</x:Reference>
+            </Flowchart.StartNode>
+            <FlowSwitch x:TypeArguments="x:String" x:Name="__ReferenceID5" DisplayName="Que iva tiene?" Expression="[in_Iva]" sap:VirtualizedContainerService.HintSize="80,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_1">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">380,396.5</av:Point>
+                  <av:Size x:Key="ShapeSize">80,87</av:Size>
+                  <av:PointCollection x:Key="0.000000Connector">380,418.25 110,418.25 110,494.5</av:PointCollection>
+                  <av:PointCollection x:Key="0.160000Connector">460,418.25 730,418.25 730,494.5</av:PointCollection>
+                  <av:PointCollection x:Key="0.110000Connector">460,461.75 520,461.75 520,494.5</av:PointCollection>
+                  <av:PointCollection x:Key="0.080000Connector">380,461.75 310,461.75 310,494.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <FlowStep x:Key="0.160000" x:Name="__ReferenceID4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">630,494.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">730,545.5 730,620 510,620</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Iva del 0.16%" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="Q2 ( IVA soportado 16% No Pagado)">
+                  <ucas:SelectMenuItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="50">
+                      <x:String>A0 (IVA repercutido 0% No cobrado)</x:String>
+                      <x:String>A1 ( IVA repercutido 10% No cobrado)</x:String>
+                      <x:String>A2 (IVA repercutido 15% No Cobrado)</x:String>
+                      <x:String>A3 (IVA repercutido Exento)</x:String>
+                      <x:String>A4 (IVA repercutido 10% Trasladado No Cobrado)</x:String>
+                      <x:String>A5 (IVA repercutido 15% Trasladado No Cobrado)</x:String>
+                      <x:String>A7 (IVA No Objeto)</x:String>
+                      <x:String>A9 (IVA repercutido Carga Inicial)</x:String>
+                      <x:String xml:space="preserve">B0 (IVA repercutido 0%  Efectivamente Cobrado)</x:String>
+                      <x:String>B1 (IVA repercutido 10% Efectivamente Cobrado)</x:String>
+                      <x:String>B2 (IVA repercutido 15% Efectivamente Cobrado)</x:String>
+                      <x:String>B3 (IVA repercutido Exento Efectivamente Cobrado)</x:String>
+                      <x:String>B7 (IVA No Objeto)</x:String>
+                      <x:String>C5 (IEPS al 9% , IVA al 0%)</x:String>
+                      <x:String>C6 (IEPS al 6% , IVA al 16%)</x:String>
+                      <x:String>C8 (IEPS al 6% , IVA al 0%)</x:String>
+                      <x:String>C9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>D5 (IEPS Pagado al 9%, IVA al 0%)</x:String>
+                      <x:String>D6 (IEPS Pagado al 6%, IVA al 16%)</x:String>
+                      <x:String>D8 (IEPS Pagado al 6%, IVA al 0%)</x:String>
+                      <x:String>D9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>F1 ( IVA repercutido 11% No cobrado)</x:String>
+                      <x:String>F2 (IVA repercutido 16% No Cobrado)</x:String>
+                      <x:String>G1 (IVA repercutido 11% Efectivamente Cobrado)</x:String>
+                      <x:String>G2 (IVA repercutido 16% Efectivamente Cobrado)</x:String>
+                      <x:String>O0 (IEPS al 0% , IVA al 0%)</x:String>
+                      <x:String>O1 ( IEPS al 8%, IVA al 0%)</x:String>
+                      <x:String>O2 (IEPS al 0%, IVA al 16%)</x:String>
+                      <x:String>O3 (IEPS al 25%, IVA al 16%)</x:String>
+                      <x:String>O4 (IEPS al 26.5%, IVA al 16%)</x:String>
+                      <x:String>O5 (IEPS al 53%, IVA al 16%)</x:String>
+                      <x:String>O6 (IEPS al 160%, IVA al 16%)</x:String>
+                      <x:String>O7 (IEPS al 8%, IVA al 16%)</x:String>
+                      <x:String>P0 (IEPS Pagado al 0%, IVA al 0%)</x:String>
+                      <x:String>P1 (IEPS Pagado al 8%, IVA al 0%)</x:String>
+                      <x:String>P2 (IEPS Pagado al 0%, IVA al 16%)</x:String>
+                      <x:String>P3 (IEPS Pagado al 25%, IVA al 16%)</x:String>
+                      <x:String>P4 (IEPS Pagado al 26.5%, IVA al 16%)</x:String>
+                      <x:String>P5 (IEPS Pagado al 53%, IVA al 16%)</x:String>
+                      <x:String>P6 (IEPS Pagado al 160%, IVA al 16%)</x:String>
+                      <x:String>P7 (IEPS Pagado al 8%, IVA al 16%)</x:String>
+                      <x:String xml:space="preserve">Q1 (IVA soportado  11% No Pagado)</x:String>
+                      <x:String>Q2 ( IVA soportado 16% No Pagado)</x:String>
+                      <x:String>Q3 ( IVA soportado al 16% del 25 % Total No Pagado)</x:String>
+                      <x:String>Q4 (IVA soportado 8% No Pagado)</x:String>
+                      <x:String xml:space="preserve">R1 (IVA soportado  11% Efectivamente Pagado)</x:String>
+                      <x:String>R2 (IVA soportado 16% Efectivamente Pagado)</x:String>
+                      <x:String>R3 ( IVA soportado al 16% del 25 % Total Efec. Pagado)</x:String>
+                      <x:String>R4 (IVA soportado 8% Efectivamente Pagado)</x:String>
+                      <x:String>S1 (I.E.P.S. 30% e impto.s.vol.neg., IVA repercut.15%)</x:String>
+                    </scg:List>
+                  </ucas:SelectMenuItem.Items>
+                  <ucas:SelectMenuItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a1392f1-3fde-4e6d-8e7d-893aee9be3b9" InformativeScreenshot="7c4bdd8daadbca35c80ef9608b22fff0" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/cmbINVFO-MWSKZ' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ucas:SelectMenuItem.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ucas:SelectMenuItem>
+                <FlowStep.Next>
+                  <FlowStep x:Name="__ReferenceID0">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <av:Point x:Key="ShapeLocation">310,587</av:Point>
+                        <av:Size x:Key="ShapeSize">200,66</av:Size>
+                        <av:PointCollection x:Key="ConnectorLocation">410,653 410,694.5</av:PointCollection>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <Sequence DisplayName="Obtener indicador de iva y posiciones" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <ui:GetValue ContinueOnError="{x:Null}" DisplayName="Obtener indicador de iva" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_3">
+                        <ui:GetValue.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f6751743-d689-4ed4-aab8-a18512e8cdfb" InformativeScreenshot="61f254d0feb1d2ae52a389b56e70f606" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/cmbINVFO-MWSKZ' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetValue.Target>
+                        <ui:GetValue.Value>
+                          <OutArgument x:TypeArguments="x:String">[IndicadorIva]</OutArgument>
+                        </ui:GetValue.Value>
+                      </ui:GetValue>
+                      <Assign DisplayName="Sacar clave del iva" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[IndicadorIva]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[IndicadorIva.Substring(0,2)]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <ui:GetVisibleText WordsInfo="{x:Null}" DisplayName="Obtener posiciones" FormattedText="False" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetVisibleText_1">
+                        <ui:GetVisibleText.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c449dd00-aee6-454f-aea2-39754b736073" InformativeScreenshot="e107389411b9beb06ee6207eea55a9d2" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Tratar factura acreedor reg.prelim.*' /&gt;&lt;sap id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:GetVisibleText.Target>
+                        <ui:GetVisibleText.Text>
+                          <OutArgument x:TypeArguments="x:String">[Posiciones]</OutArgument>
+                        </ui:GetVisibleText.Text>
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </ui:GetVisibleText>
+                      <Assign DisplayName="Obtener solo numero de posiciones" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_3">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Posiciones]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Posiciones.Substring(0,Posiciones.IndexOf("Posiciones"))]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="Quitar espacios" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[Posiciones]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Posiciones.Trim()]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                      <Assign DisplayName="PosicionesActual = Posiciones" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:String">[PosicionesActual]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:String">[Posiciones]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                    <FlowStep.Next>
+                      <FlowStep x:Name="__ReferenceID7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <av:Point x:Key="ShapeLocation">310,694.5</av:Point>
+                            <av:Size x:Key="ShapeSize">200,51</av:Size>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:InterruptibleWhile DisplayName="Agregar indicador a Posiciones" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+                          <ui:InterruptibleWhile.Body>
+                            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,457" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                              <Sequence.Variables>
+                                <Variable x:TypeArguments="x:String" Name="Selector" />
+                              </Sequence.Variables>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <Assign DisplayName="Selector = Posiciones-PosicionesActual" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_6">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[Selector]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(Posiciones)-Convert.ToInt32(PosicionesActual)).ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                              <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="No se activa la funcion SimulateClick (Falla SAP)" DisplayName="Type Into 'CTextField  Ind.impuest...'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="TypeInto_1" SendWindowMessages="False" SimulateType="False" Text="[IndicadorIva+ &quot;[k(enter)]&quot;]">
+                                <ui:TypeInto.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d53bc428-4498-43bb-9e62-efb12b93fc1f" InformativeScreenshot="dd926f1e5e6240a28871059463529859" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Tratar factura acreedor reg.prelim.*' /&gt;&lt;sap colTooltip='Indicador impuestos' id='usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE' tableRow='{{Selector}}' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:TypeInto.Target>
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                              </ui:TypeInto>
+                              <Assign DisplayName="PosicionesActual - 1" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_7">
+                                <Assign.To>
+                                  <OutArgument x:TypeArguments="x:String">[posicionesActual]</OutArgument>
+                                </Assign.To>
+                                <Assign.Value>
+                                  <InArgument x:TypeArguments="x:String">[(Convert.ToInt32(posicionesActual)-1).ToString]</InArgument>
+                                </Assign.Value>
+                              </Assign>
+                            </Sequence>
+                          </ui:InterruptibleWhile.Body>
+                          <ui:InterruptibleWhile.Condition>
+                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="PosicionesActual &lt;&gt; &quot;0&quot;" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
+                          </ui:InterruptibleWhile.Condition>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:InterruptibleWhile>
+                      </FlowStep>
+                    </FlowStep.Next>
+                  </FlowStep>
+                </FlowStep.Next>
+              </FlowStep>
+              <FlowStep x:Key="0.110000" x:Name="__ReferenceID3">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">420,494.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">520,545.5 520,575.5 410,575.5 410,587</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Iva del 0.11%" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectMenuItem_3" Item="Q1 (IVA soportado  11% No Pagado)">
+                  <ucas:SelectMenuItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="50">
+                      <x:String>A0 (IVA repercutido 0% No cobrado)</x:String>
+                      <x:String>A1 ( IVA repercutido 10% No cobrado)</x:String>
+                      <x:String>A2 (IVA repercutido 15% No Cobrado)</x:String>
+                      <x:String>A3 (IVA repercutido Exento)</x:String>
+                      <x:String>A4 (IVA repercutido 10% Trasladado No Cobrado)</x:String>
+                      <x:String>A5 (IVA repercutido 15% Trasladado No Cobrado)</x:String>
+                      <x:String>A7 (IVA No Objeto)</x:String>
+                      <x:String>A9 (IVA repercutido Carga Inicial)</x:String>
+                      <x:String xml:space="preserve">B0 (IVA repercutido 0%  Efectivamente Cobrado)</x:String>
+                      <x:String>B1 (IVA repercutido 10% Efectivamente Cobrado)</x:String>
+                      <x:String>B2 (IVA repercutido 15% Efectivamente Cobrado)</x:String>
+                      <x:String>B3 (IVA repercutido Exento Efectivamente Cobrado)</x:String>
+                      <x:String>B7 (IVA No Objeto)</x:String>
+                      <x:String>C5 (IEPS al 9% , IVA al 0%)</x:String>
+                      <x:String>C6 (IEPS al 6% , IVA al 16%)</x:String>
+                      <x:String>C8 (IEPS al 6% , IVA al 0%)</x:String>
+                      <x:String>C9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>D5 (IEPS Pagado al 9%, IVA al 0%)</x:String>
+                      <x:String>D6 (IEPS Pagado al 6%, IVA al 16%)</x:String>
+                      <x:String>D8 (IEPS Pagado al 6%, IVA al 0%)</x:String>
+                      <x:String>D9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>F1 ( IVA repercutido 11% No cobrado)</x:String>
+                      <x:String>F2 (IVA repercutido 16% No Cobrado)</x:String>
+                      <x:String>G1 (IVA repercutido 11% Efectivamente Cobrado)</x:String>
+                      <x:String>G2 (IVA repercutido 16% Efectivamente Cobrado)</x:String>
+                      <x:String>O0 (IEPS al 0% , IVA al 0%)</x:String>
+                      <x:String>O1 ( IEPS al 8%, IVA al 0%)</x:String>
+                      <x:String>O2 (IEPS al 0%, IVA al 16%)</x:String>
+                      <x:String>O3 (IEPS al 25%, IVA al 16%)</x:String>
+                      <x:String>O4 (IEPS al 26.5%, IVA al 16%)</x:String>
+                      <x:String>O5 (IEPS al 53%, IVA al 16%)</x:String>
+                      <x:String>O6 (IEPS al 160%, IVA al 16%)</x:String>
+                      <x:String>O7 (IEPS al 8%, IVA al 16%)</x:String>
+                      <x:String>P0 (IEPS Pagado al 0%, IVA al 0%)</x:String>
+                      <x:String>P1 (IEPS Pagado al 8%, IVA al 0%)</x:String>
+                      <x:String>P2 (IEPS Pagado al 0%, IVA al 16%)</x:String>
+                      <x:String>P3 (IEPS Pagado al 25%, IVA al 16%)</x:String>
+                      <x:String>P4 (IEPS Pagado al 26.5%, IVA al 16%)</x:String>
+                      <x:String>P5 (IEPS Pagado al 53%, IVA al 16%)</x:String>
+                      <x:String>P6 (IEPS Pagado al 160%, IVA al 16%)</x:String>
+                      <x:String>P7 (IEPS Pagado al 8%, IVA al 16%)</x:String>
+                      <x:String xml:space="preserve">Q1 (IVA soportado  11% No Pagado)</x:String>
+                      <x:String>Q2 ( IVA soportado 16% No Pagado)</x:String>
+                      <x:String>Q3 ( IVA soportado al 16% del 25 % Total No Pagado)</x:String>
+                      <x:String>Q4 (IVA soportado 8% No Pagado)</x:String>
+                      <x:String xml:space="preserve">R1 (IVA soportado  11% Efectivamente Pagado)</x:String>
+                      <x:String>R2 (IVA soportado 16% Efectivamente Pagado)</x:String>
+                      <x:String>R3 ( IVA soportado al 16% del 25 % Total Efec. Pagado)</x:String>
+                      <x:String>R4 (IVA soportado 8% Efectivamente Pagado)</x:String>
+                      <x:String>S1 (I.E.P.S. 30% e impto.s.vol.neg., IVA repercut.15%)</x:String>
+                    </scg:List>
+                  </ucas:SelectMenuItem.Items>
+                  <ucas:SelectMenuItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a1392f1-3fde-4e6d-8e7d-893aee9be3b9" InformativeScreenshot="7c4bdd8daadbca35c80ef9608b22fff0" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/cmbINVFO-MWSKZ' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ucas:SelectMenuItem.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ucas:SelectMenuItem>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID0</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+              <FlowStep x:Key="0.080000" x:Name="__ReferenceID2">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">210,494.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">310,545.5 310,575.5 410,575.5 410,587</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Iva del 0.8%" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectMenuItem_4" Item="Q4 (IVA soportado 8% No Pagado)">
+                  <ucas:SelectMenuItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="50">
+                      <x:String>A0 (IVA repercutido 0% No cobrado)</x:String>
+                      <x:String>A1 ( IVA repercutido 10% No cobrado)</x:String>
+                      <x:String>A2 (IVA repercutido 15% No Cobrado)</x:String>
+                      <x:String>A3 (IVA repercutido Exento)</x:String>
+                      <x:String>A4 (IVA repercutido 10% Trasladado No Cobrado)</x:String>
+                      <x:String>A5 (IVA repercutido 15% Trasladado No Cobrado)</x:String>
+                      <x:String>A7 (IVA No Objeto)</x:String>
+                      <x:String>A9 (IVA repercutido Carga Inicial)</x:String>
+                      <x:String xml:space="preserve">B0 (IVA repercutido 0%  Efectivamente Cobrado)</x:String>
+                      <x:String>B1 (IVA repercutido 10% Efectivamente Cobrado)</x:String>
+                      <x:String>B2 (IVA repercutido 15% Efectivamente Cobrado)</x:String>
+                      <x:String>B3 (IVA repercutido Exento Efectivamente Cobrado)</x:String>
+                      <x:String>B7 (IVA No Objeto)</x:String>
+                      <x:String>C5 (IEPS al 9% , IVA al 0%)</x:String>
+                      <x:String>C6 (IEPS al 6% , IVA al 16%)</x:String>
+                      <x:String>C8 (IEPS al 6% , IVA al 0%)</x:String>
+                      <x:String>C9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>D5 (IEPS Pagado al 9%, IVA al 0%)</x:String>
+                      <x:String>D6 (IEPS Pagado al 6%, IVA al 16%)</x:String>
+                      <x:String>D8 (IEPS Pagado al 6%, IVA al 0%)</x:String>
+                      <x:String>D9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>F1 ( IVA repercutido 11% No cobrado)</x:String>
+                      <x:String>F2 (IVA repercutido 16% No Cobrado)</x:String>
+                      <x:String>G1 (IVA repercutido 11% Efectivamente Cobrado)</x:String>
+                      <x:String>G2 (IVA repercutido 16% Efectivamente Cobrado)</x:String>
+                      <x:String>O0 (IEPS al 0% , IVA al 0%)</x:String>
+                      <x:String>O1 ( IEPS al 8%, IVA al 0%)</x:String>
+                      <x:String>O2 (IEPS al 0%, IVA al 16%)</x:String>
+                      <x:String>O3 (IEPS al 25%, IVA al 16%)</x:String>
+                      <x:String>O4 (IEPS al 26.5%, IVA al 16%)</x:String>
+                      <x:String>O5 (IEPS al 53%, IVA al 16%)</x:String>
+                      <x:String>O6 (IEPS al 160%, IVA al 16%)</x:String>
+                      <x:String>O7 (IEPS al 8%, IVA al 16%)</x:String>
+                      <x:String>P0 (IEPS Pagado al 0%, IVA al 0%)</x:String>
+                      <x:String>P1 (IEPS Pagado al 8%, IVA al 0%)</x:String>
+                      <x:String>P2 (IEPS Pagado al 0%, IVA al 16%)</x:String>
+                      <x:String>P3 (IEPS Pagado al 25%, IVA al 16%)</x:String>
+                      <x:String>P4 (IEPS Pagado al 26.5%, IVA al 16%)</x:String>
+                      <x:String>P5 (IEPS Pagado al 53%, IVA al 16%)</x:String>
+                      <x:String>P6 (IEPS Pagado al 160%, IVA al 16%)</x:String>
+                      <x:String>P7 (IEPS Pagado al 8%, IVA al 16%)</x:String>
+                      <x:String xml:space="preserve">Q1 (IVA soportado  11% No Pagado)</x:String>
+                      <x:String>Q2 ( IVA soportado 16% No Pagado)</x:String>
+                      <x:String>Q3 ( IVA soportado al 16% del 25 % Total No Pagado)</x:String>
+                      <x:String>Q4 (IVA soportado 8% No Pagado)</x:String>
+                      <x:String xml:space="preserve">R1 (IVA soportado  11% Efectivamente Pagado)</x:String>
+                      <x:String>R2 (IVA soportado 16% Efectivamente Pagado)</x:String>
+                      <x:String>R3 ( IVA soportado al 16% del 25 % Total Efec. Pagado)</x:String>
+                      <x:String>R4 (IVA soportado 8% Efectivamente Pagado)</x:String>
+                      <x:String>S1 (I.E.P.S. 30% e impto.s.vol.neg., IVA repercut.15%)</x:String>
+                    </scg:List>
+                  </ucas:SelectMenuItem.Items>
+                  <ucas:SelectMenuItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a1392f1-3fde-4e6d-8e7d-893aee9be3b9" InformativeScreenshot="7c4bdd8daadbca35c80ef9608b22fff0" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/cmbINVFO-MWSKZ' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ucas:SelectMenuItem.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ucas:SelectMenuItem>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID0</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+              <FlowStep x:Key="0.000000" x:Name="__ReferenceID1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <av:Point x:Key="ShapeLocation">10,494.5</av:Point>
+                    <av:Size x:Key="ShapeSize">200,51</av:Size>
+                    <av:PointCollection x:Key="ConnectorLocation">110,545.5 110,620 310,620</av:PointCollection>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Iva del 0.00%" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="SelectMenuItem_1" Item="W0 (IVA soportado 0%  Efectivamente Pagado)">
+                  <ucas:SelectMenuItem.Items>
+                    <scg:List x:TypeArguments="x:String" Capacity="50">
+                      <x:String>A0 (IVA repercutido 0% No cobrado)</x:String>
+                      <x:String>A1 ( IVA repercutido 10% No cobrado)</x:String>
+                      <x:String>A2 (IVA repercutido 15% No Cobrado)</x:String>
+                      <x:String>A3 (IVA repercutido Exento)</x:String>
+                      <x:String>A4 (IVA repercutido 10% Trasladado No Cobrado)</x:String>
+                      <x:String>A5 (IVA repercutido 15% Trasladado No Cobrado)</x:String>
+                      <x:String>A7 (IVA No Objeto)</x:String>
+                      <x:String>A9 (IVA repercutido Carga Inicial)</x:String>
+                      <x:String xml:space="preserve">B0 (IVA repercutido 0%  Efectivamente Cobrado)</x:String>
+                      <x:String>B1 (IVA repercutido 10% Efectivamente Cobrado)</x:String>
+                      <x:String>B2 (IVA repercutido 15% Efectivamente Cobrado)</x:String>
+                      <x:String>B3 (IVA repercutido Exento Efectivamente Cobrado)</x:String>
+                      <x:String>B7 (IVA No Objeto)</x:String>
+                      <x:String>C5 (IEPS al 9% , IVA al 0%)</x:String>
+                      <x:String>C6 (IEPS al 6% , IVA al 16%)</x:String>
+                      <x:String>C8 (IEPS al 6% , IVA al 0%)</x:String>
+                      <x:String>C9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>D5 (IEPS Pagado al 9%, IVA al 0%)</x:String>
+                      <x:String>D6 (IEPS Pagado al 6%, IVA al 16%)</x:String>
+                      <x:String>D8 (IEPS Pagado al 6%, IVA al 0%)</x:String>
+                      <x:String>D9 (IEPS al 7% , IVA al 0%)</x:String>
+                      <x:String>F1 ( IVA repercutido 11% No cobrado)</x:String>
+                      <x:String>F2 (IVA repercutido 16% No Cobrado)</x:String>
+                      <x:String>G1 (IVA repercutido 11% Efectivamente Cobrado)</x:String>
+                      <x:String>G2 (IVA repercutido 16% Efectivamente Cobrado)</x:String>
+                      <x:String>O0 (IEPS al 0% , IVA al 0%)</x:String>
+                      <x:String>O1 ( IEPS al 8%, IVA al 0%)</x:String>
+                      <x:String>O2 (IEPS al 0%, IVA al 16%)</x:String>
+                      <x:String>O3 (IEPS al 25%, IVA al 16%)</x:String>
+                      <x:String>O4 (IEPS al 26.5%, IVA al 16%)</x:String>
+                      <x:String>O5 (IEPS al 53%, IVA al 16%)</x:String>
+                      <x:String>O6 (IEPS al 160%, IVA al 16%)</x:String>
+                      <x:String>O7 (IEPS al 8%, IVA al 16%)</x:String>
+                      <x:String>P0 (IEPS Pagado al 0%, IVA al 0%)</x:String>
+                      <x:String>P1 (IEPS Pagado al 8%, IVA al 0%)</x:String>
+                      <x:String>P2 (IEPS Pagado al 0%, IVA al 16%)</x:String>
+                      <x:String>P3 (IEPS Pagado al 25%, IVA al 16%)</x:String>
+                      <x:String>P4 (IEPS Pagado al 26.5%, IVA al 16%)</x:String>
+                      <x:String>P5 (IEPS Pagado al 53%, IVA al 16%)</x:String>
+                      <x:String>P6 (IEPS Pagado al 160%, IVA al 16%)</x:String>
+                      <x:String>P7 (IEPS Pagado al 8%, IVA al 16%)</x:String>
+                      <x:String xml:space="preserve">Q1 (IVA soportado  11% No Pagado)</x:String>
+                      <x:String>Q2 ( IVA soportado 16% No Pagado)</x:String>
+                      <x:String>Q3 ( IVA soportado al 16% del 25 % Total No Pagado)</x:String>
+                      <x:String>Q4 (IVA soportado 8% No Pagado)</x:String>
+                      <x:String xml:space="preserve">R1 (IVA soportado  11% Efectivamente Pagado)</x:String>
+                      <x:String>R2 (IVA soportado 16% Efectivamente Pagado)</x:String>
+                      <x:String>R3 ( IVA soportado al 16% del 25 % Total Efec. Pagado)</x:String>
+                      <x:String>R4 (IVA soportado 8% Efectivamente Pagado)</x:String>
+                      <x:String>S1 (I.E.P.S. 30% e impto.s.vol.neg., IVA repercut.15%)</x:String>
+                    </scg:List>
+                  </ucas:SelectMenuItem.Items>
+                  <ucas:SelectMenuItem.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="1a1392f1-3fde-4e6d-8e7d-893aee9be3b9" InformativeScreenshot="7c4bdd8daadbca35c80ef9608b22fff0" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/cmbINVFO-MWSKZ' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ucas:SelectMenuItem.Target>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ucas:SelectMenuItem>
+                <FlowStep.Next>
+                  <x:Reference>__ReferenceID0</x:Reference>
+                </FlowStep.Next>
+              </FlowStep>
+            </FlowSwitch>
+            <x:Reference>__ReferenceID1</x:Reference>
+            <x:Reference>__ReferenceID2</x:Reference>
+            <x:Reference>__ReferenceID3</x:Reference>
+            <x:Reference>__ReferenceID4</x:Reference>
+            <FlowStep x:Name="__ReferenceID10">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <av:Point x:Key="ShapeLocation">320,97</av:Point>
+                  <av:Size x:Key="ShapeSize">200,66</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">420,163 420,186.5</av:PointCollection>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence DisplayName="Salir de advertencias" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ForEach x:TypeArguments="x:Int32" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="370,288" sap2010:WorkflowViewState.IdRef="ForEach`1_5" Values="[Enumerable.Range(0,4).ToArray()]">
+                  <ui:ForEach.Body>
+                    <ActivityAction x:TypeArguments="x:Int32">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Int32" Name="i" />
+                      </ActivityAction.Argument>
+                      <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'UserArea  usr'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_5" Key="enter" KeyModifiers="None" SpecialKey="True">
+                        <ui:SendHotkey.Target>
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3bfa389-eb0f-4adc-a20f-e10750f585e4" InformativeScreenshot="a0ac547f93020fbd2c4507d33a05b82f" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/txtINVFO-WRBTR' /&gt;">
+                            <ui:Target.TimeoutMS>
+                              <InArgument x:TypeArguments="x:Int32" />
+                            </ui:Target.TimeoutMS>
+                            <ui:Target.WaitForReady>
+                              <InArgument x:TypeArguments="ui:WaitForReady" />
+                            </ui:Target.WaitForReady>
+                          </ui:Target>
+                        </ui:SendHotkey.Target>
+                      </ui:SendHotkey>
+                    </ActivityAction>
+                  </ui:ForEach.Body>
+                </ui:ForEach>
+                <ucas:ReadStatusbar ContinueOnError="{x:Null}" MessageData="{x:Null}" MessageId="{x:Null}" MessageNumber="{x:Null}" MessageType="{x:Null}" DisplayName="Read Statusbar 'Statusbar El'" sap:VirtualizedContainerService.HintSize="370,265" sap2010:WorkflowViewState.IdRef="ReadStatusbar_1" MessageText="[MensajeStatusBar]">
+                  <ucas:ReadStatusbar.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="bd5350fe-e2c3-4c47-8050-b24a30d82c13" InformativeScreenshot="d62d7fe289badc731f16ee9c2394aac0" Selector="&lt;sap id='sbar' /&gt;">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ucas:ReadStatusbar.Target>
+                </ucas:ReadStatusbar>
+              </Sequence>
+              <FlowStep.Next>
+                <FlowDecision x:Name="__ReferenceID8" Condition="[MensajeStatusBar.Contains(&quot;El periodo contable&quot;)]" DisplayName="Fecha contab. es incorrecta?" sap:VirtualizedContainerService.HintSize="155,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <av:Point x:Key="ShapeLocation">342.5,186.5</av:Point>
+                      <av:Size x:Key="ShapeSize">155,87</av:Size>
+                      <av:PointCollection x:Key="TrueConnector">342.5,230 292.5,230</av:PointCollection>
+                      <av:PointCollection x:Key="FalseConnector">497.5,230 510,230 510,294.5 420,294.5 420,324.5</av:PointCollection>
+                      <x:String x:Key="FalseLabel">No</x:String>
+                      <x:String x:Key="TrueLabel">Si</x:String>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <FlowDecision.True>
+                    <FlowStep x:Name="__ReferenceID9">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <av:Point x:Key="ShapeLocation">92.5,197</av:Point>
+                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">192.5,263 192.5,293 420,293 420,324.5</av:PointCollection>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <Sequence DisplayName="Actualizar fecha" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateType="{x:Null}" Activate="True" sap2010:Annotation.AnnotationText="No se activa SimulateType (Falla SAP)" DisplayName="Escribir fecha actualizada" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,165" sap2010:WorkflowViewState.IdRef="TypeInto_3" Text="[(DateTime.Now.ToString).Substring(0,10).Replace(&quot;/&quot;,&quot;.&quot;)]">
+                          <ui:TypeInto.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d8a079c0-0872-4682-acba-39a4cda03c68" InformativeScreenshot="8d358433d68b1680cb94d75d045317ec" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Tratar factura acreedor reg.prelim.1900000001 1001 2018' /&gt;&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BUDAT' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:TypeInto.Target>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </ui:TypeInto>
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Salir de advertencia 1" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4b58a9fb-b547-4c8c-badd-ab43db67b57e" InformativeScreenshot="2cdda3d3954737da846fb922e124bf4c" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BUDAT' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Salir de advertencia 2" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4b58a9fb-b547-4c8c-badd-ab43db67b57e" InformativeScreenshot="2cdda3d3954737da846fb922e124bf4c" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BUDAT' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                        <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Salir de advertencia 3" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="enter" KeyModifiers="None" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="4b58a9fb-b547-4c8c-badd-ab43db67b57e" InformativeScreenshot="2cdda3d3954737da846fb922e124bf4c" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/ctxtINVFO-BUDAT' /&gt;">
+                              <ui:Target.TimeoutMS>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:Target.TimeoutMS>
+                              <ui:Target.WaitForReady>
+                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                              </ui:Target.WaitForReady>
+                            </ui:Target>
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                      </Sequence>
+                      <FlowStep.Next>
+                        <FlowStep x:Name="__ReferenceID6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <av:Point x:Key="ShapeLocation">320,324.5</av:Point>
+                              <av:Size x:Key="ShapeSize">200,51</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">420,375.5 420,396.5</av:PointCollection>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Clic en Calc. Impuestos" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition Position="Center">
+                                <ui:CursorPosition.OffsetX>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetX>
+                                <ui:CursorPosition.OffsetY>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:CursorPosition.OffsetY>
+                              </ui:CursorPosition>
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c06f1d97-9cde-4c17-9680-969c3e902050" InformativeScreenshot="f59911250f6cfdd658b8232eb139f170" Selector="&lt;sap id='usr/tabsTS/tabpMAIN/ssubPAGE:SAPLFDCB:0010/chkINVFO-XMWST' /&gt;">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                          <FlowStep.Next>
+                            <x:Reference>__ReferenceID5</x:Reference>
+                          </FlowStep.Next>
+                        </FlowStep>
+                      </FlowStep.Next>
+                    </FlowStep>
+                  </FlowDecision.True>
+                  <FlowDecision.False>
+                    <x:Reference>__ReferenceID6</x:Reference>
+                  </FlowDecision.False>
+                </FlowDecision>
+              </FlowStep.Next>
+            </FlowStep>
+            <x:Reference>__ReferenceID0</x:Reference>
+            <x:Reference>__ReferenceID7</x:Reference>
+            <x:Reference>__ReferenceID8</x:Reference>
+            <x:Reference>__ReferenceID9</x:Reference>
+            <x:Reference>__ReferenceID6</x:Reference>
+          </Flowchart>
+        </ActivityAction>
+      </ui:WindowScope.Body>
+    </ui:WindowScope>
+  </Sequence>
+</Activity>
