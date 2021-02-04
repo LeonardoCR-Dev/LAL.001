@@ -20,7 +20,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,812</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>924,812</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_Validacion_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -87,7 +87,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap2010:Annotation.AnnotationText="LAL.001.006&#xD;&#xA;&#xD;&#xA;Realiza la validacion de los datos de Sap contra el Xml y agrega retenciones en caso de que sea necesario" DisplayName="SAP_Validacion" sap:VirtualizedContainerService.HintSize="934,747" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="&#xA;&#xA;Realiza la validacion de los datos de Sap contra el Xml y agrega retenciones en caso de que sea necesario" DisplayName="SAP_Validacion" sap:VirtualizedContainerService.HintSize="934,747" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="StringFallas" />
       <Variable x:TypeArguments="x:Boolean" Name="FallaRetencion" />

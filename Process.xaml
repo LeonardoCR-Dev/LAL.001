@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,1050</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1474,1135</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="24">
@@ -64,17 +64,16 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>UiPath.Mail</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="846,985" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText=" &#xA;&#xA;Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="846,1070" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="804,821" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="804,876" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="x:Boolean" Name="ExisteFactura" />
         <Variable x:TypeArguments="x:Boolean" Name="FacturaOcupada" />
@@ -92,7 +91,7 @@
           <av:Size x:Key="ShapeSize">60,75</av:Size>
           <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,127.5</av:PointCollection>
           <x:Double x:Key="Width">770</x:Double>
-          <x:Double x:Key="Height">785</x:Double>
+          <x:Double x:Key="Height">840</x:Double>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Flowchart.StartNode>
@@ -238,7 +237,7 @@
                             <av:PointCollection x:Key="ConnectorLocation">290,563 290,616.5</av:PointCollection>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Extraer - Obtener - Validar (Datos)" sap:VirtualizedContainerService.HintSize="376,508" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                        <Sequence DisplayName="Extraer - Obtener - Validar (Datos)" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_3">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:String" Name="SapFecha" />
                             <Variable x:TypeArguments="x:String" Name="XmlEmisor" />
@@ -336,13 +335,14 @@
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <av:Point x:Key="ShapeLocation">10,717</av:Point>
-                                    <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                    <av:Size x:Key="ShapeSize">200,123</av:Size>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Agregar incidente a excel - mover a invalidas" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                <Sequence sap2010:Annotation.AnnotationText="LAL.002.004.001&#xA;Realizar registro de facturas no procesadas" DisplayName="Agregar incidente a excel - mover a invalidas" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_8">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <Assign DisplayName="Assign Arrat_Datos (Incidente)" sap:VirtualizedContainerService.HintSize="384,60" sap2010:WorkflowViewState.IdRef="Assign_6">
@@ -387,16 +387,17 @@
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <av:Point x:Key="ShapeLocation">570,497</av:Point>
-                            <av:Size x:Key="ShapeSize">200,66</av:Size>
+                            <av:Size x:Key="ShapeSize">200,123</av:Size>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Agregar incidente a excel (No existe en intranet)" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                        <Sequence sap2010:Annotation.AnnotationText="LAL.002.004.001&#xA;Realizar registro de facturas no procesadas" DisplayName="Agregar incidente a excel (No existe en intranet)" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_6">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Tratar' (No existe en intranet)" sap:VirtualizedContainerService.HintSize="434,490" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="3495981bce5e147eb8e0d2eb56ebb263" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Tratar factura acreedor reg.prelim.*' /&gt;">
+                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'saplogon.exe Tratar' (No existe en intranet)" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="WindowScope_4" InformativeScreenshot="3495981bce5e147eb8e0d2eb56ebb263" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Tratar factura acreedor reg.prelim.*' /&gt;">
                             <ui:WindowScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -406,6 +407,7 @@
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Finalizar'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
@@ -455,8 +457,14 @@
                                 </Sequence>
                               </ActivityAction>
                             </ui:WindowScope.Body>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
                           </ui:WindowScope>
-                          <Assign DisplayName="Assign Arrat_Datos (No existe en intranet)" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_5">
+                          <Assign DisplayName="Assign Arrat_Datos (No existe en intranet)" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_5">
                             <Assign.To>
                               <OutArgument x:TypeArguments="s:String[]">[DatosExcel]</OutArgument>
                             </Assign.To>
@@ -464,7 +472,7 @@
                               <InArgument x:TypeArguments="s:String[]">[{in_TransactionItem,SapTexto,DateTime.Now.ToString,"La factura no existe en el portal de proveedores"}]</InArgument>
                             </Assign.Value>
                           </Assign>
-                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Excel_Incidentes workflow (No existe en intranet)" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Common\Excel_Incidentes.xaml">
+                          <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Excel_Incidentes workflow (No existe en intranet)" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_18" UnSafe="False" WorkflowFileName="Common\Excel_Incidentes.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="s:String[]" x:Key="in_Datos">[DatosExcel]</InArgument>
                             </ui:InvokeWorkflowFile.Arguments>

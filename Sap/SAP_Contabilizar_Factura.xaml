@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>940,996</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1474,996</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>SAP_Contabilizar_Factura_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="26">
@@ -69,7 +69,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="LAL.001.008&#xA;&#xA;Contabiliza la factura" DisplayName="SAP_Contabilizar_Factura" sap:VirtualizedContainerService.HintSize="950,931" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="&#xA;&#xA;Contabiliza la factura" DisplayName="SAP_Contabilizar_Factura" sap:VirtualizedContainerService.HintSize="950,931" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -130,7 +130,7 @@
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <av:Point x:Key="ShapeLocation">688,196.5</av:Point>
                       <av:Size x:Key="ShapeSize">84,87</av:Size>
-                      <av:PointCollection x:Key="TrueConnector">688,240 640,240</av:PointCollection>
+                      <av:PointCollection x:Key="TrueConnector">688,240 658,240 658,268.5 640,268.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <FlowDecision.True>
@@ -138,14 +138,15 @@
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <av:Point x:Key="ShapeLocation">440,207</av:Point>
-                          <av:Size x:Key="ShapeSize">200,66</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">540,273 540,326.5</av:PointCollection>
+                          <av:Size x:Key="ShapeSize">200,123</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">540,330 540,326.5</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Clic en simular" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                      <Sequence sap2010:Annotation.AnnotationText="LAL.002.003.001&#xA;Simular factura y verificar que los datos sean correctos" DisplayName="Clic en simular" sap:VirtualizedContainerService.HintSize="200,123" sap2010:WorkflowViewState.IdRef="Sequence_2">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Click 'Button  Simular'" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT">
@@ -263,7 +264,7 @@
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <av:Point x:Key="ShapeLocation">257,445.5</av:Point>
                                       <av:Size x:Key="ShapeSize">160,87</av:Size>
-                                      <av:PointCollection x:Key="TrueConnector">257,489 207,489</av:PointCollection>
+                                      <av:PointCollection x:Key="TrueConnector">257,489 227,489 227,510 207,510</av:PointCollection>
                                       <av:PointCollection x:Key="FalseConnector">417,489 467,489</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
@@ -272,17 +273,17 @@
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                           <av:Point x:Key="ShapeLocation">7,456</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,66</av:Size>
+                                          <av:Size x:Key="ShapeSize">200,108</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Contabilizar" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                                      <Sequence sap2010:Annotation.AnnotationText="LAL.002.003.002&#xA;Contabilizar factura" DisplayName="Contabilizar" sap:VirtualizedContainerService.HintSize="200,108" sap2010:WorkflowViewState.IdRef="Sequence_7">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                            <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Se contabiliza&quot;]" />
-                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en Finalizar" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en contabilizar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
                                           <ui:Click.CursorPosition>
                                             <ui:CursorPosition Position="Center">
                                               <ui:CursorPosition.OffsetX>
@@ -294,7 +295,7 @@
                                             </ui:CursorPosition>
                                           </ui:Click.CursorPosition>
                                           <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="fbf70b4dfa1c16a20d53bc38891599b1" Selector="&lt;sap id='tbar[0]/btn[15]' /&gt;">
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="3e5b2fa1f5351f5e0e39aef0cf1f29eb" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de documentos' /&gt;&lt;sap id='tbar[1]/btn[47]' /&gt;">
                                               <ui:Target.TimeoutMS>
                                                 <InArgument x:TypeArguments="x:Int32" />
                                               </ui:Target.TimeoutMS>
@@ -305,11 +306,12 @@
                                           </ui:Click.Target>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:Click>
-                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic para confirmar slair" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="clic en confirmar contabilizacion" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
                                           <ui:Click.CursorPosition>
                                             <ui:CursorPosition Position="Center">
                                               <ui:CursorPosition.OffsetX>
@@ -321,7 +323,7 @@
                                             </ui:CursorPosition>
                                           </ui:Click.CursorPosition>
                                           <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="48839e0dc4403f10182cb1154ed0d9be" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="f5ce932cc18b6db4e4cec35fea7a8687" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
                                               <ui:Target.TimeoutMS>
                                                 <InArgument x:TypeArguments="x:Int32" />
                                               </ui:Target.TimeoutMS>
@@ -332,55 +334,40 @@
                                           </ui:Click.Target>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:Click>
-                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en si" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                          <ui:Click.CursorPosition>
-                                            <ui:CursorPosition Position="Center">
-                                              <ui:CursorPosition.OffsetX>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetX>
-                                              <ui:CursorPosition.OffsetY>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetY>
-                                            </ui:CursorPosition>
-                                          </ui:Click.CursorPosition>
-                                          <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="707c274947863b3976a7f6ad20089493" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Fin tratamiento' idx='*' /&gt;&lt;sap id='usr/btnSPOP-OPTION1' /&gt;">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:Click.Target>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:Click>
-                                        <Assign DisplayName="Out_Falla como false" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_2">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Boolean">[out_Falla]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Se comento esta parte ya que si se completa el proceso hasta esta parte, se van acabando los insumos&#xA;" DisplayName="Por el momento se comenta esta parte (Se agotan insumos)" sap:VirtualizedContainerService.HintSize="436,541" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Se comento esta parte ya que si se completa el proceso hasta esta parte, se van acabando los insumos&#xA;" DisplayName="Por el momento se comenta esta parte (Se agotan insumos)" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="CommentOut_2">
                                           <ui:CommentOut.Body>
-                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,406" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_6">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en contabilizar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                            </Sequence>
+                                          </ui:CommentOut.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:CommentOut>
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+                                          <ui:CommentOut.Body>
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,682" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[&quot;Se contabiliza&quot;]" />
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en Finalizar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -392,7 +379,7 @@
                                                   </ui:CursorPosition>
                                                 </ui:Click.CursorPosition>
                                                 <ui:Click.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="3e5b2fa1f5351f5e0e39aef0cf1f29eb" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de documentos' /&gt;&lt;sap id='tbar[1]/btn[47]' /&gt;">
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="fbf70b4dfa1c16a20d53bc38891599b1" Selector="&lt;sap id='tbar[0]/btn[15]' /&gt;">
                                                     <ui:Target.TimeoutMS>
                                                       <InArgument x:TypeArguments="x:Int32" />
                                                     </ui:Target.TimeoutMS>
@@ -403,12 +390,11 @@
                                                 </ui:Click.Target>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:Click>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="clic en confirmar contabilizacion" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_17" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic para confirmar slair" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_14" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -420,7 +406,7 @@
                                                   </ui:CursorPosition>
                                                 </ui:Click.CursorPosition>
                                                 <ui:Click.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="f5ce932cc18b6db4e4cec35fea7a8687" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="48839e0dc4403f10182cb1154ed0d9be" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
                                                     <ui:Target.TimeoutMS>
                                                       <InArgument x:TypeArguments="x:Int32" />
                                                     </ui:Target.TimeoutMS>
@@ -431,7 +417,33 @@
                                                 </ui:Click.Target>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                                  </scg:Dictionary>
+                                                </sap:WorkflowViewStateService.ViewState>
+                                              </ui:Click>
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en si" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_15" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                <ui:Click.CursorPosition>
+                                                  <ui:CursorPosition Position="Center">
+                                                    <ui:CursorPosition.OffsetX>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetX>
+                                                    <ui:CursorPosition.OffsetY>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:CursorPosition.OffsetY>
+                                                  </ui:CursorPosition>
+                                                </ui:Click.CursorPosition>
+                                                <ui:Click.Target>
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="707c274947863b3976a7f6ad20089493" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Fin tratamiento' idx='*' /&gt;&lt;sap id='usr/btnSPOP-OPTION1' /&gt;">
+                                                    <ui:Target.TimeoutMS>
+                                                      <InArgument x:TypeArguments="x:Int32" />
+                                                    </ui:Target.TimeoutMS>
+                                                    <ui:Target.WaitForReady>
+                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                    </ui:Target.WaitForReady>
+                                                  </ui:Target>
+                                                </ui:Click.Target>
+                                                <sap:WorkflowViewStateService.ViewState>
+                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
@@ -440,12 +452,19 @@
                                           </ui:CommentOut.Body>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
                                         </ui:CommentOut>
+                                        <Assign DisplayName="Out_Falla como false" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_2">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[out_Falla]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
                                       </Sequence>
                                     </FlowStep>
                                   </FlowDecision.True>
@@ -457,112 +476,22 @@
                                           <av:Size x:Key="ShapeSize">200,66</av:Size>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Regresar y contabilizar" sap:VirtualizedContainerService.HintSize="478,1717" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                      <Sequence DisplayName="Regresar y contabilizar" sap:VirtualizedContainerService.HintSize="376,1129" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box 2" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Se contabiliza&quot;]" />
-                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en Finalizar si regreso" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                          <ui:Click.CursorPosition>
-                                            <ui:CursorPosition Position="Center">
-                                              <ui:CursorPosition.OffsetX>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetX>
-                                              <ui:CursorPosition.OffsetY>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetY>
-                                            </ui:CursorPosition>
-                                          </ui:Click.CursorPosition>
-                                          <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="fbf70b4dfa1c16a20d53bc38891599b1" Selector="&lt;sap id='tbar[0]/btn[15]' /&gt;">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:Click.Target>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:Click>
-                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic para confirmar salir si regreso" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                          <ui:Click.CursorPosition>
-                                            <ui:CursorPosition Position="Center">
-                                              <ui:CursorPosition.OffsetX>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetX>
-                                              <ui:CursorPosition.OffsetY>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetY>
-                                            </ui:CursorPosition>
-                                          </ui:Click.CursorPosition>
-                                          <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="48839e0dc4403f10182cb1154ed0d9be" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:Click.Target>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:Click>
-                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en si si regreso" sap:VirtualizedContainerService.HintSize="436,137" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                          <ui:Click.CursorPosition>
-                                            <ui:CursorPosition Position="Center">
-                                              <ui:CursorPosition.OffsetX>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetX>
-                                              <ui:CursorPosition.OffsetY>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:CursorPosition.OffsetY>
-                                            </ui:CursorPosition>
-                                          </ui:Click.CursorPosition>
-                                          <ui:Click.Target>
-                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="707c274947863b3976a7f6ad20089493" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Fin tratamiento' idx='*' /&gt;&lt;sap id='usr/btnSPOP-OPTION1' /&gt;">
-                                              <ui:Target.TimeoutMS>
-                                                <InArgument x:TypeArguments="x:Int32" />
-                                              </ui:Target.TimeoutMS>
-                                              <ui:Target.WaitForReady>
-                                                <InArgument x:TypeArguments="ui:WaitForReady" />
-                                              </ui:Target.WaitForReady>
-                                            </ui:Target>
-                                          </ui:Click.Target>
-                                          <sap:WorkflowViewStateService.ViewState>
-                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                            </scg:Dictionary>
-                                          </sap:WorkflowViewStateService.ViewState>
-                                        </ui:Click>
-                                        <Assign DisplayName="Out_Falla como false si regreso" sap:VirtualizedContainerService.HintSize="436,60" sap2010:WorkflowViewState.IdRef="Assign_4">
-                                          <Assign.To>
-                                            <OutArgument x:TypeArguments="x:Boolean">[out_Falla]</OutArgument>
-                                          </Assign.To>
-                                          <Assign.Value>
-                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                                          </Assign.Value>
-                                        </Assign>
-                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Se comento esta parte ya que si se completa el proceso hasta esta parte, se van acabando los insumos&#xA;" DisplayName="Por el momento se comenta esta parte (Se agotan insumos)2" sap:VirtualizedContainerService.HintSize="436,895" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                        <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="CommentOut_5">
                                           <ui:CommentOut.Body>
-                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,760" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,682" sap2010:WorkflowViewState.IdRef="Sequence_11">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic para regresar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box 2" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Se contabiliza&quot;]" />
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en Finalizar si regreso" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -574,7 +503,7 @@
                                                   </ui:CursorPosition>
                                                 </ui:Click.CursorPosition>
                                                 <ui:Click.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e5b95ed5-66a4-4620-8683-9aca56068319" InformativeScreenshot="7ae07aef064d7a2842986be267211106" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de documentos' /&gt;&lt;sap id='tbar[0]/btn[3]' /&gt;">
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="fbf70b4dfa1c16a20d53bc38891599b1" Selector="&lt;sap id='tbar[0]/btn[15]' /&gt;">
                                                     <ui:Target.TimeoutMS>
                                                       <InArgument x:TypeArguments="x:Int32" />
                                                     </ui:Target.TimeoutMS>
@@ -589,7 +518,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:Click>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic confirmar regresar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic para confirmar salir si regreso" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -601,7 +530,7 @@
                                                   </ui:CursorPosition>
                                                 </ui:Click.CursorPosition>
                                                 <ui:Click.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7a39339b-d12a-41e1-88cd-5feadbd4a45e" InformativeScreenshot="48839e0dc4403f10182cb1154ed0d9be" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="48839e0dc4403f10182cb1154ed0d9be" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
                                                     <ui:Target.TimeoutMS>
                                                       <InArgument x:TypeArguments="x:Int32" />
                                                     </ui:Target.TimeoutMS>
@@ -616,7 +545,7 @@
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:Click>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en contabilizar afuera" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en si si regreso" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT">
                                                 <ui:Click.CursorPosition>
                                                   <ui:CursorPosition Position="Center">
                                                     <ui:CursorPosition.OffsetX>
@@ -628,7 +557,7 @@
                                                   </ui:CursorPosition>
                                                 </ui:Click.CursorPosition>
                                                 <ui:Click.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="3e5b2fa1f5351f5e0e39aef0cf1f29eb" Selector="&lt;sap id='tbar[1]/btn[23]' /&gt;">
+                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ea80814e-32b7-480a-bafe-bbe44ad9f078" InformativeScreenshot="707c274947863b3976a7f6ad20089493" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Fin tratamiento' idx='*' /&gt;&lt;sap id='usr/btnSPOP-OPTION1' /&gt;">
                                                     <ui:Target.TimeoutMS>
                                                       <InArgument x:TypeArguments="x:Int32" />
                                                     </ui:Target.TimeoutMS>
@@ -639,35 +568,6 @@
                                                 </ui:Click.Target>
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                                    <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                                                  </scg:Dictionary>
-                                                </sap:WorkflowViewStateService.ViewState>
-                                              </ui:Click>
-                                              <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic confirmar contabilizacion si regreso" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                                <ui:Click.CursorPosition>
-                                                  <ui:CursorPosition Position="Center">
-                                                    <ui:CursorPosition.OffsetX>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:CursorPosition.OffsetX>
-                                                    <ui:CursorPosition.OffsetY>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:CursorPosition.OffsetY>
-                                                  </ui:CursorPosition>
-                                                </ui:Click.CursorPosition>
-                                                <ui:Click.Target>
-                                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="f5ce932cc18b6db4e4cec35fea7a8687" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
-                                                    <ui:Target.TimeoutMS>
-                                                      <InArgument x:TypeArguments="x:Int32" />
-                                                    </ui:Target.TimeoutMS>
-                                                    <ui:Target.WaitForReady>
-                                                      <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                    </ui:Target.WaitForReady>
-                                                  </ui:Target>
-                                                </ui:Click.Target>
-                                                <sap:WorkflowViewStateService.ViewState>
-                                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                     <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
@@ -676,7 +576,143 @@
                                           </ui:CommentOut.Body>
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:CommentOut>
+                                        <Assign DisplayName="Out_Falla como false si regreso" sap:VirtualizedContainerService.HintSize="334,60" sap2010:WorkflowViewState.IdRef="Assign_4">
+                                          <Assign.To>
+                                            <OutArgument x:TypeArguments="x:Boolean">[out_Falla]</OutArgument>
+                                          </Assign.To>
+                                          <Assign.Value>
+                                            <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                                          </Assign.Value>
+                                        </Assign>
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic para regresar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e5b95ed5-66a4-4620-8683-9aca56068319" InformativeScreenshot="7ae07aef064d7a2842986be267211106" Selector="&lt;wnd app='saplogon.exe' cls='SAP_FRONTEND_SESSION' title='Resumen de documentos' /&gt;&lt;sap id='tbar[0]/btn[3]' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:Click>
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic confirmar regresar" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7a39339b-d12a-41e1-88cd-5feadbd4a45e" InformativeScreenshot="48839e0dc4403f10182cb1154ed0d9be" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:Click>
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic en contabilizar afuera" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="3e5b2fa1f5351f5e0e39aef0cf1f29eb" Selector="&lt;sap id='tbar[1]/btn[23]' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:Click>
+                                        <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" sap2010:Annotation.AnnotationText="No se puede usar SimulateClick (Falla SAP)" ClickType="CLICK_SINGLE" DisplayName="Clic confirmar contabilizacion si regreso" sap:VirtualizedContainerService.HintSize="334,137" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                          <ui:Click.CursorPosition>
+                                            <ui:CursorPosition Position="Center">
+                                              <ui:CursorPosition.OffsetX>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetX>
+                                              <ui:CursorPosition.OffsetY>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:CursorPosition.OffsetY>
+                                            </ui:CursorPosition>
+                                          </ui:Click.CursorPosition>
+                                          <ui:Click.Target>
+                                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="10e27598-dcd2-4501-a37a-3fd4922326bf" InformativeScreenshot="f5ce932cc18b6db4e4cec35fea7a8687" Selector="&lt;wnd app='saplogon.exe' cls='#32770' title='Información' idx='*' /&gt;&lt;sap id='tbar[0]/btn[0]' /&gt;">
+                                              <ui:Target.TimeoutMS>
+                                                <InArgument x:TypeArguments="x:Int32" />
+                                              </ui:Target.TimeoutMS>
+                                              <ui:Target.WaitForReady>
+                                                <InArgument x:TypeArguments="ui:WaitForReady" />
+                                              </ui:Target.WaitForReady>
+                                            </ui:Target>
+                                          </ui:Click.Target>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                              <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                            </scg:Dictionary>
+                                          </sap:WorkflowViewStateService.ViewState>
+                                        </ui:Click>
+                                        <ui:CommentOut sap2010:Annotation.AnnotationText="Se comento esta parte ya que si se completa el proceso hasta esta parte, se van acabando los insumos&#xA;" DisplayName="Por el momento se comenta esta parte (Se agotan insumos)2" sap:VirtualizedContainerService.HintSize="334,138" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                                          <ui:CommentOut.Body>
+                                            <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                                              <sap:WorkflowViewStateService.ViewState>
+                                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                                </scg:Dictionary>
+                                              </sap:WorkflowViewStateService.ViewState>
+                                            </Sequence>
+                                          </ui:CommentOut.Body>
+                                          <sap:WorkflowViewStateService.ViewState>
+                                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                                             </scg:Dictionary>

@@ -15,7 +15,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,1308</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>772,1308</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ExtaerDatosXML_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -88,7 +88,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence sap2010:Annotation.AnnotationText="LAL.001.003&#xD;&#xA;&#xD;&#xA;Extrae los datos de un XML que se pasa por un argumento de entrada (in_ArchivoXml)" DisplayName="Extraer Datos Xml" sap:VirtualizedContainerService.HintSize="376,1243" sap2010:WorkflowViewState.IdRef="Sequence_8">
+  <Sequence sap2010:Annotation.AnnotationText="LAL.002.002.001&#xA;&#xA;Extrae los datos de un XML que se pasa por un argumento de entrada (in_ArchivoXml)" DisplayName="Extraer Datos Xml" sap:VirtualizedContainerService.HintSize="376,1243" sap2010:WorkflowViewState.IdRef="Sequence_8">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="XmlString" />
       <Variable x:TypeArguments="sxl:XDocument" Name="XmlDocument" />

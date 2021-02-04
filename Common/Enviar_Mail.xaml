@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1174,773</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1474,773</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>mail_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -70,7 +70,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="LAL.001.009&#xD;&#xA;&#xD;&#xA;Envia un email y recibe por argumentos a quien va dirigido, el cuerpo del correo, a quien mas va copiado y si es necesario el archivo que se adjuntara" DisplayName="Enviar email de confirmacion" sap:VirtualizedContainerService.HintSize="639,708" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="LAL.002.004.002&#xA;&#xA;Envia un email y recibe por argumentos a quien va dirigido, el cuerpo del correo, a quien mas va copiado y si es necesario el archivo que se adjuntara" DisplayName="Enviar email de confirmacion" sap:VirtualizedContainerService.HintSize="639,708" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
